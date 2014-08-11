@@ -1,4 +1,6 @@
-- Dir.glob(Rails.root.to_s + "'/public/uploads/pdf'/#{type}/*.pdf").each do |file|
+- Dir.glob(Rails.root.to_s + "/public/uploads/#{type}/*.pdf").each do |file|
   %ul
     %li
-      = link_to File.basename(file).humanize,download_crawlers_path(type: type.to_sym,filename: File.basename(file))
+      = link_to File.basename(file).humanize,download_upload_pdf_index_path(type: type.to_sym,filename: File.basename(file))
+
+

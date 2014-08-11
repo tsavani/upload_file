@@ -4,7 +4,15 @@ UploadFile::Application.routes.draw do
 
   root "upload_pdf#index"
   
-  match '/upload_file',    to: 'upload_pdf#upload_file',    via: 'post'
+  # match '/upload_file',    to: 'upload_pdf#upload_file',    via: 'post'
+  # match '/download_upload_pdf',    to: 'upload_pdf#download',    via: 'post'
+
+   resources :upload_pdf,only: [:index] do 
+    collection do 
+      post 'upload_file'
+      get 'download'
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
