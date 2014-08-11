@@ -1,0 +1,10 @@
+= form_tag upload_file_path, :multipart => true do
+  .row
+    = file_field_tag 'crawler[upload_file]'
+  / .row
+  /   = radio_button 'crawler','type', 'avnet'
+  /   Avnet
+  /   = radio_button 'crawler','type', 'digikey'
+  /   Digikey
+  %br/
+  = submit_tag 'Submit',class: 'button'

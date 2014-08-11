@@ -1,0 +1,9 @@
+%fieldset
+  %dl.accordion{"data-accordion" => ""}
+    %dd
+      %a{href: "#panel2"} Upload PDF
+      #panel2.content.active
+        = render partial: 'upload_form'
+      .panel
+        = render partial: 'files_listing',locals: {type: 'pdf'}
+    

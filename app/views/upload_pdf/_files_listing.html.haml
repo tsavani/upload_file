@@ -1,0 +1,4 @@
+- Dir.glob("#{ENV['DATA_LOAD_PATH']}/#{type}/*.csv").each do |file|
+  %ul
+    %li
+      = link_to File.basename(file).humanize,download_crawlers_path(type: type.to_sym,filename: File.basename(file))
