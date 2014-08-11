@@ -1,10 +1,5 @@
-= form_tag upload_file_path, :multipart => true do
+= form_for(:upload, url: upload_file_path) do |f|
   .row
-    = file_field_tag 'crawler[upload_file]'
-  / .row
-  /   = radio_button 'crawler','type', 'avnet'
-  /   Avnet
-  /   = radio_button 'crawler','type', 'digikey'
-  /   Digikey
+    = f.file_field 'file'
   %br/
-  = submit_tag 'Submit',class: 'button'
+  = f.submit 'Submit',class: 'button'

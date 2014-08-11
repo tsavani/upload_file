@@ -13,3 +13,8 @@
 
  *= require_tree .
  */
+ .alert-box.error {
+    background-color: #F04124;
+    border-color: #DE2D0F;
+    color: white;
+ }
